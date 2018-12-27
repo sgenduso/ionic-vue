@@ -1,0 +1,6 @@
+{
+  "appId": "app.hackaton.ionicvue",
+  "appName": "Hack2018",
+  "bundledWebRuntime": false,
+  "webDir": "dist"
+}
