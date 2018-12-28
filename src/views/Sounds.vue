@@ -23,7 +23,6 @@ export default class Sounds extends Vue {
 </script>
 
 <style lang="scss" scoped>
-
     ion-grid, ion-row {
         height: 75vh;
     }

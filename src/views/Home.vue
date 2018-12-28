@@ -1,30 +1,20 @@
 <template>
     <div class="home" align-self-center>
-        <!-- <ion-content fullScreen> -->
             <ion-grid>
                 <ion-row>
                     <ion-col size="12" align-self-center>
                         <img class="spencil-logo" alt="logo" src="../assets/heart-spencil.png">
-                        <HelloWorld msg="Vue + Ionic + Typescript"/>
+                        <h1>Vue + Ionic + Typescript</h1>
                     </ion-col>
                 </ion-row>
             </ion-grid>
-            <!-- <tabs></tabs> -->
-        <!-- </ion-content> -->
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-// import Tabs from '@/components/Tabs.vue';
 
-@Component({
-    components: {
-        HelloWorld,
-        // Tabs,
-    },
-})
+@Component({})
 
 export default class Home extends Vue {}
 </script>

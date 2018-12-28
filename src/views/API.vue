@@ -1,10 +1,26 @@
 <template>
-    <div class="hello">
-        <h1>{{ msg }}</h1>
-        <ion-button color="primary" @click="getRandomAww">AWW</ion-button>
-        <div class = "aww" padding-top>
-            <img v-if="randomAww" :src="randomAww" alt="random aww">
-        </div>
+    <div class="api">
+
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Go Fetch</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-grid padding-top>
+            <ion-row class="aww-btn" align-items-end>
+                <ion-col size="12">
+                    <ion-button color="primary" size="large" @click="getRandomAww">awww</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <div class = "aww" padding-top>
+                        <img v-if="randomAww" :src="randomAww" alt="random aww">
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </div>
 </template>
 
@@ -15,8 +31,6 @@ import _ from 'lodash';
 
 @Component
 export default class HelloWorld extends Vue {
-    // shorthand for getting props passed to component
-    @Prop() private msg!: string;
     randomAww: string | null = null;
     awws: string|null[] = [];
 
@@ -56,25 +70,13 @@ export default class HelloWorld extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-    h3 {
-        margin: 40px 0 0;
+    ion-grid {
+        height: 75vh;
     }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
+    .aww-btn {
+        height: 15vh;
     }
-
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    a {
-        color: var(--orange);
-    }
-
     .aww, img {
-        max-height: 35vh;
+        max-height: 55vh;
     }
 </style>
