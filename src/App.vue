@@ -1,12 +1,26 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <div id="app" align-self-center>
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    </div> -->
+    <!-- <router-view/> -->
+    <tabs></tabs>
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import Tabs from '@/components/Tabs.vue';
+
+@Component({
+    components: {
+        Tabs,
+    },
+})
+
+export default class Home extends Vue {}
+</script>
 
 <style lang="scss">
 #app {
