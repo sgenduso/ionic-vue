@@ -15,8 +15,9 @@
             </ion-row>
             <ion-row>
                 <ion-col size="12">
-                    <div class = "aww" padding-top>
-                        <img v-if="randomAww" :src="randomAww" alt="random aww">
+                    <div v-if="randomAww" class = "aww" padding-top>
+                        <img :src="randomAww" alt="random aww">
+                        <p>{{ title }}</p>
                     </div>
                 </ion-col>
             </ion-row>
@@ -30,35 +31,46 @@ import axios from 'axios';
 import _ from 'lodash';
 
 @Component
-export default class HelloWorld extends Vue {
-    randomAww: string | null = null;
-    awws: string|null[] = [];
+export default class API extends Vue {
+    protected randomAww: string | null = null;
+    protected title: string | null = null;
+    protected awws: Array<string|null> = [];
+    protected titles: Array<string|null> = [];
 
     // shorthand for component methods
-    async getRandomAww(): Promise<string> {
+    protected async getRandomAww(): Promise<string> {
         if (this.awws.length) {
             this.randomAww = this.pickRandomFromList(this.awws);
         } else {
-            let url = 'https://www.reddit.com/r/aww/top.json?t=day&limit=100';
-            let response = await axios.get(url);
-            let imageUrls = this.getImageUrlsFromResponse(response);
+            const url = 'https://www.reddit.com/r/aww/top.json?t=day&limit=100';
+            const response = await axios.get(url);
+            const imageUrls = this.getImageUrlsFromResponse(response);
             this.randomAww = this.pickRandomFromList(imageUrls);
         }
     }
 
-    getImageUrlsFromResponse(response: object): string[] {
-        let posts = _.get(response, 'data.data.children');
-        let postsWithImages = posts.filter(post => post.data.url.includes('i.redd.it'));
-        let imageUrls = postsWithImages.map(post => post.data.url);
+    protected getImageUrlsFromResponse(response: object): string[] {
+        interface Post {
+            data: {
+                url: string,
+                title: string,
+            };
+        }
+
+        const posts = _.get(response, 'data.data.children');
+        const postsWithImages = posts.filter((post: Post) => post.data.url.includes('i.redd.it'));
+        const imageUrls = postsWithImages.map((post: Post) => post.data.url);
+        const titles = postsWithImages.map((post: Post) => post.data.title);
         this.awws = imageUrls;
 
         return imageUrls;
     }
 
-    pickRandomFromList(imageUrls: string[]): string | null {
-        let numOptions = imageUrls.length;
+    protected pickRandomFromList(imageUrls: Array<string|null>): string | null {
+        const numOptions = imageUrls.length;
         if (numOptions) {
-            let randomInt = Math.floor(Math.random() * numOptions - 1);
+            const randomInt = Math.floor(Math.random() * numOptions - 1);
+            this.title = this.titles[randomInt];
             return imageUrls[randomInt];
         } else {
             return null;

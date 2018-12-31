@@ -122,3 +122,27 @@ body, html, #app, .home {
   margin: 0;
   padding: 0;
 }
+
+.red {
+    color: var(--red);
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.green {
+    color: var(--green);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.black {
+    color: var(--black);
+}

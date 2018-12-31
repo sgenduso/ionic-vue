@@ -1,12 +1,7 @@
 <template>
-  <div id="app" align-self-center>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <!-- <router-view/> -->
-    <tabs></tabs>
-  </div>
+    <div id="app" align-self-center>
+        <tabs></tabs>
+    </div>
 </template>
 
 <script lang="ts">
