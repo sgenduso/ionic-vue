@@ -38,7 +38,6 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import _ from 'lodash';
 
 @Component
 export default class Sounds extends Vue {

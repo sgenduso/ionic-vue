@@ -9,6 +9,9 @@
         <ion-tab label="Sounds" icon="musical-notes">
             <Sounds/>
         </ion-tab>
+        <ion-tab label="Photos" icon="camera">
+            <Photos/>
+        </ion-tab>
     </ion-tabs>
 </template>
 
@@ -17,12 +20,14 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import Home from '@/views/Home.vue'; // @ is an alias to /src
 import API from '@/views/API.vue';
 import Sounds from '@/views/Sounds.vue';
+import Photos from '@/views/Photos.vue';
 
 @Component({
     components: {
         Home,
         API,
         Sounds,
+        Photos,
     },
 })
 

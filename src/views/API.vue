@@ -38,7 +38,7 @@ export default class API extends Vue {
     protected titles: Array<string|null> = [];
 
     // shorthand for component methods
-    protected async getRandomAww(): Promise<string> {
+    protected async getRandomAww(): Promise<void> {
         if (this.awws.length) {
             this.randomAww = this.pickRandomFromList(this.awws);
         } else {
