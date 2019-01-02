@@ -12,6 +12,9 @@
         <ion-tab label="Photos" icon="camera">
             <Photos/>
         </ion-tab>
+        <ion-tab label="Charts" icon="stats">
+            <Charts/>
+        </ion-tab>
     </ion-tabs>
 </template>
 
@@ -21,6 +24,7 @@ import Home from '@/views/Home.vue'; // @ is an alias to /src
 import API from '@/views/API.vue';
 import Sounds from '@/views/Sounds.vue';
 import Photos from '@/views/Photos.vue';
+import Charts from '@/views/Charts.vue';
 
 @Component({
     components: {
@@ -28,6 +32,7 @@ import Photos from '@/views/Photos.vue';
         API,
         Sounds,
         Photos,
+        Charts,
     },
 })
 
