@@ -1,5 +1,5 @@
 {
-  "compilerOptions": {
+    "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -12,30 +12,42 @@
     "sourceMap": false,
     "baseUrl": ".",
     "types": [
-      "webpack-env",
-      "mocha",
-      "chai"
+        "webpack-env",
+        "mocha",
+        "chai"
+    ],
+    "typeRoots": [
+        "typings"
     ],
     "paths": {
-      "@/*": [
+        "@/*": [
         "src/*"
-      ]
+        ]
     },
     "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
+        "esnext",
+        "dom",
+        "dom.iterable",
+        "scripthost"
     ]
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "tests/**/*.ts",
+        "tests/**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules",
+        "typings",
+        "src/components/charts/*.js",
+        "src/views/Charts.vue",
+    ],
+    "rules": {
+        "no-console": false //Disable for typescript
+    },
+    "jsRules": {
+        "no-console": false //Disable for javascript
+    }
 }

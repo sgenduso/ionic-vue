@@ -111,6 +111,8 @@
     --ion-color-step-850: #62676c;
     --ion-color-step-900: #595e63;
     --ion-color-step-950: #4f555b;
+
+    --ion-font-family: Avenir, sans-serif;
 }
 
 ion-title {

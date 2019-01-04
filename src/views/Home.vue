@@ -1,13 +1,13 @@
 <template>
     <div class="home" align-self-center>
-            <ion-grid>
-                <ion-row>
-                    <ion-col size="12" align-self-center>
-                        <img class="spencil-logo" alt="logo" src="../assets/heart-spencil.png">
-                        <h1>Vue + Ionic + Typescript</h1>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12" align-self-center>
+                    <img class="spencil-logo" alt="logo" src="../assets/heart-spencil.png">
+                    <h1>Vue + Ionic + Typescript</h1>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </div>
 </template>
 

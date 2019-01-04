@@ -10,26 +10,26 @@
         <ion-grid padding-top>
             <ion-row align-items-center>
                 <ion-col>
-                    <i class="fas fa-dragon fa-5x red animated" :class="{'rubberBand': shaking == 'dragon'}" @click="playSound('dragon')"></i>
+                    <i class="fas fa-dragon fa-6x red animated" :class="{'rubberBand': shaking == 'dragon'}" @click="playSound('dragon')"></i>
                 </ion-col>
                 <ion-col>
-                    <i class="fas fa-dog fa-5x orange animated" :class="{'swing': shaking == 'dog'}" @click="playSound('dog')"></i>
-                </ion-col>
-            </ion-row>
-            <ion-row align-items-center>
-                <ion-col>
-                    <i class="fas fa-cat fa-5x yellow animated" :class="{'shake': shaking == 'cat'}" @click="playSound('cat')"></i>
-                </ion-col>
-                <ion-col>
-                    <i class="fas fa-frog fa-5x green animated" :class="{'wobble': shaking == 'frog'}" @click="playSound('frog')"></i>
+                    <i class="fas fa-dog fa-6x orange animated" :class="{'swing': shaking == 'dog'}" @click="playSound('dog')"></i>
                 </ion-col>
             </ion-row>
             <ion-row align-items-center>
                 <ion-col>
-                    <i class="fas fa-hippo fa-5x blue animated" :class="{'jello': shaking == 'hippo'}" @click="playSound('hippo')"></i>
+                    <i class="fas fa-cat fa-6x yellow animated" :class="{'shake': shaking == 'cat'}" @click="playSound('cat')"></i>
                 </ion-col>
                 <ion-col>
-                    <i class="fas fa-crow fa-5x black animated" :class="{'tada': shaking == 'crow'}" @click="playSound('crow')"></i>
+                    <i class="fas fa-frog fa-6x green animated" :class="{'wobble': shaking == 'frog'}" @click="playSound('frog')"></i>
+                </ion-col>
+            </ion-row>
+            <ion-row align-items-center>
+                <ion-col>
+                    <i class="fas fa-hippo fa-6x blue animated" :class="{'jello': shaking == 'hippo'}" @click="playSound('hippo')"></i>
+                </ion-col>
+                <ion-col>
+                    <i class="fas fa-crow fa-6x black animated" :class="{'tada': shaking == 'crow'}" @click="playSound('crow')"></i>
                 </ion-col>
             </ion-row>
         </ion-grid>

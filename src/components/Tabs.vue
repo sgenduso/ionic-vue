@@ -1,19 +1,33 @@
 <template>
     <ion-tabs>
         <ion-tab label="Home" icon="home">
-            <Home/>
+            <!-- use (swipe) and https://beta.ionicframework.com/docs/native/native-page-transitions -->
+            <transition name="fade" enter-active-class="animated fade">
+                <Home/>
+            </transition>
+        </ion-tab>
+        <ion-tab label="Gestures" icon="redo">
+            <Gestures/>
         </ion-tab>
         <ion-tab label="API" icon="logo-reddit">
-            <API/>
+            <transition name="fade" enter-active-class="animated fade">
+                <API/>
+            </transition>
         </ion-tab>
         <ion-tab label="Sounds" icon="musical-notes">
-            <Sounds/>
+            <transition name="fade" enter-active-class="animated fade">
+                <Sounds/>
+            </transition>
         </ion-tab>
         <ion-tab label="Photos" icon="camera">
-            <Photos/>
+            <transition name="fade" enter-active-class="animated fade">
+                <Photos/>
+            </transition>
         </ion-tab>
         <ion-tab label="Charts" icon="stats">
-            <Charts/>
+            <transition name="fade" enter-active-class="animated fade">
+                <Charts/>
+            </transition>
         </ion-tab>
     </ion-tabs>
 </template>
@@ -21,6 +35,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import Home from '@/views/Home.vue'; // @ is an alias to /src
+import Gestures from '@/views/Gestures.vue';
 import API from '@/views/API.vue';
 import Sounds from '@/views/Sounds.vue';
 import Photos from '@/views/Photos.vue';
@@ -29,6 +44,7 @@ import Charts from '@/views/Charts.vue';
 @Component({
     components: {
         Home,
+        Gestures,
         API,
         Sounds,
         Photos,
